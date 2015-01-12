@@ -36,5 +36,21 @@ variables in function is not available outside of the function
 
 ### Arrays
 
-- mix data types
+  - mix data types
+
+  shift: removes from beginning
+  unshift: adds to beginning
+
+  pop: removes from end
+  push: adds to end
+
+  splice(num, num) alters array, removes elements 
+
+  slice:  creates copy of new array, leaves exisitng array intact
+
+  split: converts string to an array
+
+  
+
+
 
