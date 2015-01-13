@@ -110,11 +110,94 @@ var alertLast = function(toAlert) {
 /////// Part 2 //////////
 
 var person = function(name, age) {
-  return {
-    name: name,
-    age: age
+  var obj = {};
+    obj.name = name;
+    obj.age = age,
+    obj.sayName = function() {
+      alert(this.name);
+    }
   };
 };
+
+
+// constructor
+// function that returns an object
+
+
+var Person = function(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+//prototype is an object that every function has
+//array.push is an example
+//like a backpack that the constructor has and is able
+//to lend to its children
+
+Person.prototype.sayName = function() {
+  alert(this.name);
+}
+
+var sven = new Person("sven", 50);
+
+Person.prototype.gender = "male";
+
+//can add protoype to Array
+
+var fruit = ["apple", "banana", "orange"];
+
+Array.prototype.first = function() {
+  return this[0];
+}
+
+
+//car constructor that has properties: color, make, model
+//drive function (alert driving) 
+//stop function (alert stopping)
+
+var Car = function(color, make, model) {
+  this.color = color;
+  this.make = make;
+  this.model = model;
+}
+
+Car.prototype.drive = function() {
+  alert("Driving");
+}
+
+Car.prototype.stop = function() {
+  alert("Stopping");
+}
+
+var fiesta = new Car("red", "ford", "fiesta");
+var tesla = new Car("blue", "tesla", "model S");
+
+//////
+
+var Boat = function(color, price) {
+  //var this = Object.create(Boat.prototype)
+  this.color = color;
+  this.price = price;
+}
+
+Boat.prototype.drive = function() {
+  console.log("Driving");
+}
+
+Boat.prototype.stop = function() {
+  console.log("Stopping");
+}
+
+Boat.prototype.float = function() {
+  console.log("floating")
+}
+
+var catamaran = new Boat('blue', 4000);
+var speedboat = new Boat('red', 60000);
+
+//keyword 'this' refers to whatever is to the left of the dot at call time 
+
+
 
 
 
