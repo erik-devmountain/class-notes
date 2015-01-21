@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="pillage">
+  <head>
+  </head>
+  <body ng-controller="loot">
+
+    <input type="text" ng-model="searchText">
+
+    <select ng-model="order" ng-options="option.value as option.label for option in options"></select>
+
+    <ul ng-repeat="key in vikings | filter: searchText | orderBy: order">
+      <li>{{ key.name }} : {{ key.occupation }}</li>
+    </ul>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/mainController.js"></script>
+  </body>
+</html>
