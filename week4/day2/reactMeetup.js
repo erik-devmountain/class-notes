@@ -1,0 +1,2 @@
+- start with directive, turn it into a react component 
+- learn about webpack
