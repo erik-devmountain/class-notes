@@ -1,0 +1,9 @@
+{
+  "name": "express-lalala",
+  "description": "asdlasd",
+  "dependencies": {
+    "body-parser": "^1.11.0",
+    "express": "^4.11.2",
+    "request": "^2.53.0"
+  }
+}
